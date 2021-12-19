@@ -1,0 +1,12 @@
+
+<div class="container">
+  <h1 class="fw-light text-center text-lg-start mt-4 mb-0">Fun memes Gallery</h1>
+  <hr class="mt-2 mb-5">
+  <div class="row text-center text-lg-start">
+
+    <div *ngFor="let item of (memes$ | async).data.memes" class="col-lg-3 col-md-4 col-6">
+      <app-meme [meme]= "item"></app-meme>
+    </div>
+  </div>
+
+</div>
